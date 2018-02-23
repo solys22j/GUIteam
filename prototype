@@ -35,7 +35,7 @@ import javax.swing.UIManager;
  */
 public class Window implements ActionListener{
 
-	
+	private DrawLineAndPoint drawingLine = new DrawLineAndPoint();
 	private JFrame frame; //Frame for the application
 	private final JPanel panel = new JPanel(); //Panel for the window
 	private final Canvas canvas = new Canvas(); //Canvas to draw on
@@ -174,15 +174,7 @@ public class Window implements ActionListener{
 		playButton.addActionListener(this);
 		playButton.setIcon(new ImageIcon(Window.class.getResource("/com/sun/javafx/webkit/prism/resources/mediaPlayDisabled.png")));
 		
-		saveButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				// TODO Auto-generated method stub
-			}
-		});
-		canvas.setBackground(Color.WHITE);
-		
-		frame.getContentPane().add(canvas, BorderLayout.CENTER);
+		frame.getContentPane().add(drawingLine, BorderLayout.CENTER);
 	
 		//Sets up the color pallette label
 		lblColorPalet.setFont(new Font("Tahoma", Font.ITALIC, 12));
