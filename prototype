@@ -36,7 +36,7 @@ import javax.swing.UIManager;
  */
 public class Window extends implements ActionListener{
 
-	
+	private DrawLineAndPoint drawingLine = new DrawLineAndPoint();
 	private JFrame frame; //Frame for the application
 	private final JPanel panel = new JPanel(); //Panel for the window
 	private final Canvas canvas = new Canvas(); //Canvas to draw on
